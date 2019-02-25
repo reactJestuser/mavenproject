@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite">
+    <listeners>
+        <listener class-name="testngRun.TestListener"></listener>
+    </listeners>
+    <test name="Test1">
+        <groups>
+            <dependencies>
+                <group name="B" depends-on="A" />
+
+            </dependencies>
+        </groups>
+        <classes>
+            <class name="testngRun.Class1" />
+            <class name="testngRun.Class2" />
+        </classes>
+    </test>
+
+    <test name="Test2">
+        <classes>
+            <class name="testngRun.Class3" />
+        </classes>
+    </test>
+</suite>
